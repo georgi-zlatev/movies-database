@@ -8,7 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { MovieDetailsComponent } from './movies-list/movie-details/movie-details.component';
 import { AwardsListComponent } from './awards-list/awards-list.component';
-import { AwardDetailsComponent } from './awards-list/award-details/award-details.component';
+import { AwardDetailsComponent } from './award-details/award-details.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AwardDetailsComponent } from './awards-list/award-details/award-details
     BrowserModule,
     AppRoutingModule,
     CoreModule,
+    SharedModule,
     HttpClientModule,
   ],
   providers: [],

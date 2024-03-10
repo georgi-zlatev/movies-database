@@ -1,8 +1,8 @@
 <section class="movies-list">
-    <div class="movie-card">
+    <div *ngFor="let movie of movies" class="movie-card">
         <img src="https://m.media-amazon.com/images/M/MV5BN2QyZGU4ZDctOWMzMy00NTc5LThlOGQtODhmNDI1NmY5YzAwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="Movie 1">
-        <h3>Movie Title 1</h3>
-        <p>Year of Release: 2020</p>
-        <p>Short Description of the movie.</p>
+        <h3>{{movie.name}}</h3>
+        <p>Year of Release: {{movie.releaseYear}}</p>
+        <p>{{movie.plotSummary}}</p>
     </div>
 </section>
