@@ -1,0 +1,20 @@
+.movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movie-card {
+    background-color: #fff;
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 8px;
+    margin: 5px;
+    padding: 20px;
+    width: 300px;
+}
+
+.movie-card img {
+    height: 200px;
+    width: auto;
+    border-radius: 4px;
+}
