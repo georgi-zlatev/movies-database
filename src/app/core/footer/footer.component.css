@@ -3,7 +3,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 2rem;
-    position: fixed;
+    position:static;
     bottom: 0;
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
