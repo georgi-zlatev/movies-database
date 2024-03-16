@@ -1,0 +1,33 @@
+.mini-header {
+    background: linear-gradient(to right, #2980b9, #16a085); /* Blue to green gradient */
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+
+  .mini-header h1 {
+    margin: 0;
+  }
+
+  .mini-nav {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    margin-top: 15px;
+  }
+
+  .mini-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .mini-nav a:hover {
+    background-color: #fff;
+    color: #2980b9;
+  }
