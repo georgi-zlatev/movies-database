@@ -10,6 +10,8 @@ import { MovieDetailsComponent } from './movies-list/movie-details/movie-details
 import { AwardsListComponent } from './awards-list/awards-list.component';
 import { AwardDetailsComponent } from './award-details/award-details.component';
 import { SharedModule } from './shared/shared.module';
+import { MoviesComponent } from './movies/movies.component';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { SharedModule } from './shared/shared.module';
     MovieDetailsComponent,
     AwardsListComponent,
     AwardDetailsComponent,
+    MoviesComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { SharedModule } from './shared/shared.module';
     CoreModule,
     SharedModule,
     HttpClientModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

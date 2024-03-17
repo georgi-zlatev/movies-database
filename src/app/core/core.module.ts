@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MiniNavBarComponent } from './mini-nav-bar/mini-nav-bar.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +14,8 @@ import { MiniNavBarComponent } from './mini-nav-bar/mini-nav-bar.component';
     MiniNavBarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,
