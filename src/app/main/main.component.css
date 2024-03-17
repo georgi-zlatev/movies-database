@@ -1,0 +1,25 @@
+.movies-list {
+    display: flex;
+    flex-wrap: wrap; /* Change to wrap for multiple lines */
+    justify-content: space-around;
+    margin: 0 auto; /* Center the container horizontally */
+    width: auto; /* Adjust width as needed */
+  }
+  
+  .movie-card {
+    background-color: #fff;
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: calc(25% - 20px); /* Adjusted width for four cards in a row */
+    text-align: center; /* Center text within cards (optional) */
+  }
+  
+  .movie-card img {
+    height: 200px;
+    display: block; /* Ensure image fills container width */
+    margin: 0 auto; /* Center image horizontally */
+    border-radius: 4px;
+  }
+  

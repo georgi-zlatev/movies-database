@@ -12,6 +12,8 @@ import { AwardDetailsComponent } from './award-details/award-details.component';
 import { SharedModule } from './shared/shared.module';
 import { MoviesComponent } from './movies/movies.component';
 import { UserModule } from './user/user.module';
+import { ErrorComponent } from './error/error.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,14 +24,16 @@ import { UserModule } from './user/user.module';
     AwardsListComponent,
     AwardDetailsComponent,
     MoviesComponent,
+    ErrorComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
     SharedModule,
     HttpClientModule,
-    UserModule
+    UserModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
