@@ -9,14 +9,17 @@ import { Movie } from '../types/movies';
 })
 export class MoviesListComponent implements OnInit {
   movies: Movie[] = []
-  
+  isLoading: boolean = true;
+
 constructor(private api: ApiService){}
 
   ngOnInit(): void {
     this.api.getMovies().subscribe((movies) =>{
       console.log(movies);
       this.movies = movies
-      
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 400);
     }
     )
   }

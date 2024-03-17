@@ -3,6 +3,14 @@
     aspect-ratio: 1;
     display: grid;
     animation: l14 4s infinite;
+    margin-left: 50%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    position: relative;
+  }
+
+  h2{
+    margin-left: 48.5%;
   }
   .loader::before,
   .loader::after {    
