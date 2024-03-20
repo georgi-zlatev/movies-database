@@ -1,0 +1,22 @@
+.awards-list {
+    display: flex;
+    flex-wrap: wrap; /* Change to wrap for multiple lines */
+    justify-content: space-around;
+    margin: 0 auto; /* Center the container horizontally */
+    width: auto; /* Adjust width as needed */
+  }
+  
+  .award-card {
+    background-color: #fff;
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: calc(25% - 20px); /* Adjusted width for four cards in a row */
+    text-align: center; /* Center text within cards (optional) */
+  }
+  
+  .award-card h3 {
+    margin-top: 0; /* Remove margin from the top of the title */
+  }
+  
