@@ -23,3 +23,69 @@
     border-radius: 4px;
   }
   
+  h2{
+    padding-left: 2.2em;
+  }
+
+  .awards-list {
+    display: flex;
+    flex-wrap: wrap; /* Change to wrap for multiple lines */
+    justify-content: space-around;
+    margin: 0 auto; /* Center the container horizontally */
+    width: auto; /* Adjust width as needed */
+  }
+
+  .award-card {
+    background-color: #fff;
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: calc(25% - 20px); /* Adjusted width for four cards in a row */
+    text-align: center; /* Center text within cards (optional) */
+  }
+
+  .award-card img {
+    height: 200px;
+    display: block; /* Ensure image fills container width */
+    margin: 0 auto; /* Center image horizontally */
+    border-radius: 4px;
+  }
+
+  .all-movies {
+    background-color: #fff;
+    border: 2px solid #3498db; 
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    width: calc(25% - 20px); 
+    display: block;
+    margin: 0 auto; 
+    font-size: 20px;
+  }
+  
+  .all-movies:hover {
+    background-color: #3498db;
+    color: #fff;
+  }
+
+  .all-awards {
+    background-color: #fff;
+    border: 2px solid #3498db; 
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    width: calc(25% - 20px); 
+    display: block;
+    margin: 0 auto; 
+    font-size: 20px;
+  }
+  
+  .all-awards:hover {
+    background-color: #3498db;
+    color: #fff;
+  }
