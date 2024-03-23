@@ -1,98 +1,91 @@
 .movies-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0 auto;
-  width: auto;
-}
+    display: flex;
+    flex-wrap: wrap; /* Change to wrap for multiple lines */
+    justify-content: space-around;
+    margin: 0 auto; /* Center the container horizontally */
+    width: auto; /* Adjust width as needed */
+  }
+  
+  .movie-card {
+    background-color: #fff;
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: calc(25% - 20px); /* Adjusted width for four cards in a row */
+    text-align: center; /* Center text within cards (optional) */
+  }
+  
+  .movie-card img {
+    height: 200px;
+    display: block; /* Ensure image fills container width */
+    margin: 0 auto; /* Center image horizontally */
+    border-radius: 4px;
+  }
+  
+  h2{
+    padding-left: 2.2em;
+  }
 
-.movie-card {
-  background-color: #fff;
-  border: 2px solid #3498db;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 20px;
-  width: calc(25% - 20px);
-  text-align: center;
-}
+  .awards-list {
+    display: flex;
+    flex-wrap: wrap; /* Change to wrap for multiple lines */
+    justify-content: space-around;
+    margin: 0 auto; /* Center the container horizontally */
+    width: auto; /* Adjust width as needed */
+  }
 
-.movie-card img {
-  height: 200px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 4px;
-}
+  .award-card {
+    background-color: #fff;
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: calc(25% - 20px); /* Adjusted width for four cards in a row */
+    text-align: center; /* Center text within cards (optional) */
+  }
 
-h2 {
-  padding-left: 2.2em;
-}
+  .award-card img {
+    height: 200px;
+    display: block; /* Ensure image fills container width */
+    margin: 0 auto; /* Center image horizontally */
+    border-radius: 4px;
+  }
 
-.awards-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0 auto;
-  width: auto;
-}
+  .all-movies {
+    background-color: #fff;
+    border: 2px solid #3498db; 
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    width: calc(25% - 20px); 
+    display: block;
+    margin: 0 auto; 
+    font-size: 20px;
+  }
+  
+  .all-movies:hover {
+    background-color: #3498db;
+    color: #fff;
+  }
 
-.award-card {
-  background-color: #fff;
-  border: 2px solid #3498db;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 20px;
-  width: calc(25% - 20px);
-  text-align: center;
-}
-
-.award-card img {
-  height: 200px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 4px;
-}
-
-.all-movies {
-  background-color: #3498db;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 20px;
-  text-align: center;
-  cursor: pointer;
-  width: calc(25% - 20px);
-  display: block;
-  margin: 0 auto;
-  font-size: 20px;
-  transition: background-color 0.2s, color 0.2s;
-
-}
-
-.all-movies:hover {
-  background-color: #fff;
-  color: #3498db;
-  border: 2px solid #3498db;
-}
-
-.all-awards {
-  background-color: #3498db;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 20px;
-  text-align: center;
-  cursor: pointer;
-  width: calc(25% - 20px);
-  display: block;
-  margin: 0 auto;
-  font-size: 20px;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.all-awards:hover {
-  background-color: #fff;
-  color: #3498db;
-  border: 2px solid #3498db;
-}
+  .all-awards {
+    background-color: #fff;
+    border: 2px solid #3498db; 
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    width: calc(25% - 20px); 
+    display: block;
+    margin: 0 auto; 
+    font-size: 20px;
+  }
+  
+  .all-awards:hover {
+    background-color: #3498db;
+    color: #fff;
+  }

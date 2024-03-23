@@ -19,5 +19,4 @@ export class ApiService {
     const { apiUrl } = environment
     return this.http.get<Award[]>(`${apiUrl}/awards.json`)
    }
-  
 }

@@ -6,7 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./movie-details.component.css']
 })
 export class MovieDetailsComponent {
-  @Input() movie: any; 
 
-  constructor() { }
 }
