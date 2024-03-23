@@ -1,20 +1,40 @@
-.movie-details img {
-  height: 200px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 4px;
-}
-
 .movie-details {
   background-color: #fff;
   border: 2px solid #3498db;
   border-radius: 8px;
-  margin: 10px auto; /* Add margin to the top and bottom, and set auto for left and right */
+  margin: 10px auto;
   padding: 20px;
   width: 90%;
-  text-align: center;
+  display: flex;
   align-items: center;
-  max-width: 800px; /* Optionally set a maximum width */
+  max-width: 800px;
+}
+
+.movie-details img {
+  height: 300px;
+  border-radius: 4px;
+  margin-right: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+
+}
+
+.movie-details .movie-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.button-container {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  padding-left: 25%;
+  padding-right: 25%;
+
 }
 
 .back-button{
@@ -34,7 +54,53 @@
   width: 10%;
 }
 
+.awards-button{
+  background-color: #3498db;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  font-size: 15px;
+  transition: background-color 0.2s, color 0.2s;
+  width: 10%;
+}
+
+.home-button{
+  background-color: #3498db;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  font-size: 15px;
+  transition: background-color 0.2s, color 0.2s;
+  width: 10%;
+}
+
 .back-button:hover{
+  background-color: #fff;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.awards-button:hover{
+  background-color: #fff;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.home-button:hover{
   background-color: #fff;
   color: #3498db;
   border: 2px solid #3498db;

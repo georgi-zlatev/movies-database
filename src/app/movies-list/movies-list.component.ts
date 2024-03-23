@@ -17,7 +17,6 @@ export class MoviesListComponent implements OnInit {
 
   ngOnInit(): void {
     this.api.getMovies().subscribe((movies) => {
-      console.log(movies);
       this.movies = movies;
       setTimeout(() => {
         this.isLoading = false;
@@ -27,7 +26,6 @@ export class MoviesListComponent implements OnInit {
 
   navigateToDetails(movieId: string): void {
     this.api.getMovieById(movieId).subscribe((movie) => {
-      console.log(movieId);
     })
     this.router.navigate(['/movie', movieId]);
   }
