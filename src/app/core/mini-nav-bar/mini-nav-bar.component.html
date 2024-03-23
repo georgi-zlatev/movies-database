@@ -1,7 +1,11 @@
 <header class="mini-header">
-    <h1>Your Movie Database</h1>
-    <div class="mini-nav">
-      <a routerLink="/login" class="btn-login">Login</a>
-      <a routerLink="/register" class="btn-register">Register</a>
-    </div>
-  </header>
+  <h1>Your Movie Database</h1>
+  <div *ngIf="!isLoggedIn" class="mini-nav">
+    <a routerLink="/login" class="btn-login">Login</a>
+    <a routerLink="/register" class="btn-register">Register</a>
+  </div>
+  <div *ngIf="isLoggedIn" class="mini-nav">
+    <a routerLink="/profile" class="btn-profile">{{ firstName }}'s Profile</a>
+    <a (click)="logout()" class="btn-logout">Logout</a>
+  </div>
+</header>
