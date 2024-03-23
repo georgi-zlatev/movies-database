@@ -53,8 +53,9 @@
   }
 
   .all-movies {
-    background-color: #fff;
-    border: 2px solid #3498db; 
+    background-color: #3498db;
+    border: 2px solid #fff; 
+    color: #fff;
     border-radius: 8px;
     margin: 10px;
     padding: 20px;
@@ -64,16 +65,19 @@
     display: block;
     margin: 0 auto; 
     font-size: 20px;
+    transition: background-color 0.2s, color 0.2s;
   }
   
   .all-movies:hover {
-    background-color: #3498db;
-    color: #fff;
+    background-color: #fff;
+    color: #3498db;
+    border-color: #3498db;
   }
 
   .all-awards {
-    background-color: #fff;
-    border: 2px solid #3498db; 
+    background-color: #3498db;
+    color: #fff;
+    border: 2px solid #fff; 
     border-radius: 8px;
     margin: 10px;
     padding: 20px;
@@ -83,9 +87,11 @@
     display: block;
     margin: 0 auto; 
     font-size: 20px;
+    transition: background-color 0.2s, color 0.2s;
   }
   
   .all-awards:hover {
-    background-color: #3498db;
-    color: #fff;
+    background-color: #fff;
+    color: #3498db;
+    border-color: #3498db;
   }
