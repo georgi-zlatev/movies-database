@@ -1,0 +1,7 @@
+diff a/src/app/api.service.ts b/src/app/api.service.ts	(rejected hunks)
+@@ -19,4 +19,5 @@
+     const { apiUrl } = environment
+     return this.http.get<Award[]>(`${apiUrl}/awards.json`)
+    }
++  
+ }

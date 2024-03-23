@@ -5,7 +5,7 @@
 <div *ngIf="!isLoading" class="theme-title">
     <section class="movies-list">
         <div *ngFor="let movie of movies" class="movie-card">
-            <img src="https://m.media-amazon.com/images/M/MV5BN2QyZGU4ZDctOWMzMy00NTc5LThlOGQtODhmNDI1NmY5YzAwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="Movie 1">
+            <img src={{movie.posterUrl}} alt={{movie.name}}>
             <h3>{{movie.name}}</h3>
             <p class="year-of-release">Year of Release: {{movie.releaseYear}}</p>
             <p class="plot-summary">{{movie.plotSummary}}</p>
