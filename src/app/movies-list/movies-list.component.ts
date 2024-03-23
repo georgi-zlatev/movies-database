@@ -9,22 +9,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./movies-list.component.css']
 })
 export class MoviesListComponent implements OnInit {
-  movies: Movie[] = []
+  movies: Movie[] = [];
+  movie: Movie[] = []
   isLoading: boolean = true;
 
-constructor(private api: ApiService, private router: Router){}
+  constructor(private api: ApiService, private router: Router) {}
+
   ngOnInit(): void {
-    this.api.getMovies().subscribe((movies) =>{
+    this.api.getMovies().subscribe((movies) => {
       console.log(movies);
-      this.movies = movies
+      this.movies = movies;
       setTimeout(() => {
         this.isLoading = false;
-      },);
-    }
-    )
+      });
+    });
   }
 
-  navigateToDetails(movieId: string) {
+  navigateToDetails(movieId: string): void {
+    this.api.getMovieById(movieId).subscribe((movie) => {
+      console.log(movieId);
+    })
     this.router.navigate(['/movie', movieId]);
   }
 }

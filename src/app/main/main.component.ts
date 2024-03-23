@@ -11,18 +11,18 @@ import { Award } from '../types/awards';
 export class MainComponent {
   movies: Movie[] = []
   awards: Award[] = []
+  isLoading: boolean = true;
 
   constructor(private api: ApiService){}
   
     ngOnInit(): void {
       this.api.getMovies().subscribe((movies) =>{
         this.movies = movies
-        
       }
       )
       this.api.getAwards().subscribe((awards) =>{
         this.awards = awards
-        
+        this.isLoading = false
       }
       )
     }

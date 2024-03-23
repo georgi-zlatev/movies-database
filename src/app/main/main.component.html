@@ -1,32 +1,39 @@
-<h2>Top 3 trending moves this month:</h2>
-<section class="movies-list">
-  <div *ngFor="let movie of movies.slice(0, 3)" class="movie-card">
-    <img
-      src="https://m.media-amazon.com/images/M/MV5BN2QyZGU4ZDctOWMzMy00NTc5LThlOGQtODhmNDI1NmY5YzAwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
-      alt="Movie 1"
-    />
-    <h3>{{ movie.name }}</h3>
-    <p>Year of Release: {{ movie.releaseYear }}</p>
-    <p>{{ movie.plotSummary }}</p>
-  </div>
-</section>
-<br />
-<br />
+<div *ngIf="isLoading" class="theme-title">
+  <app-loader />
+</div>
 
-<button routerLink="/movies" class="all-movies">Check all movies</button>
+<div *ngIf="!isLoading">
+  <h2>Top 3 trending moves this month:</h2>
+  <section class="movies-list">
+    <div *ngFor="let movie of movies.slice(0, 3)" class="movie-card">
+      <img
+        src="https://m.media-amazon.com/images/M/MV5BN2QyZGU4ZDctOWMzMy00NTc5LThlOGQtODhmNDI1NmY5YzAwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+        alt="Movie 1"
+      />
+      <h3>{{ movie.name }}</h3>
+      <p>Year of Release: {{ movie.releaseYear }}</p>
+      <p>{{ movie.plotSummary }}</p>
+    </div>
+  </section>
 
-<br />
-<h2>Top 3 awards this month:</h2>
-<section class="awards-list">
-  <div *ngFor="let award of awards.slice(0, 3)" class="award-card">
-    <h3>{{ award.name }}</h3>
-    <p>Year of Release: {{ award.year }}</p>
-    <p>{{ award.category }}</p>
-  </div>
-</section>
+  <br />
+  <br />
 
-<br />
-<br />
-<button routerLink="/awards" class="all-awards">Check all awards</button>
-<br />
-<br />
+  <button routerLink="/movies" class="all-movies">Check all movies</button>
+
+  <br />
+  <h2>Top 3 awards this month:</h2>
+  <section class="awards-list">
+    <div *ngFor="let award of awards.slice(0, 3)" class="award-card">
+      <h3>{{ award.name }}</h3>
+      <p>Year of Release: {{ award.year }}</p>
+      <p>{{ award.category }}</p>
+    </div>
+  </section>
+
+  <br />
+  <br />
+  <button routerLink="/awards" class="all-awards">Check all awards</button>
+  <br />
+  <br />
+</div>
