@@ -16,11 +16,10 @@ export class AwardsListComponent implements OnInit{
   constructor(private api: ApiService){}
 ngOnInit(): void {
   this.api.getAwards().subscribe((awards) =>{
-    console.log(awards);
       this.awards = awards
       setTimeout(() => {
         this.isLoading = false;
-      }, 400);
+      }, );
     
   })
 }
