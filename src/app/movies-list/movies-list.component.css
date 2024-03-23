@@ -1,12 +1,10 @@
 .movies-list {
   display: flex;
   flex-wrap: wrap;
-  /* Change to wrap for multiple lines */
   justify-content: space-around;
   margin: 0 auto;
-  /* Center the container horizontally */
   width: auto;
-  /* Adjust width as needed */
+  margin-top: 30px;
 }
 
 h3{
