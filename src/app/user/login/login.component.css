@@ -73,3 +73,8 @@
     text-decoration: underline;
 }
 
+.error {
+    color: #e74c3c; 
+    font-size: 1rem; 
+    margin-top: 0.5rem; 
+}
