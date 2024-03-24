@@ -47,7 +47,7 @@
 }
 
 .auth-section p {
-    text-align: center;
+    text-align: left;
     margin-top: 1rem;
 }
 
@@ -58,4 +58,9 @@
 
 .auth-section a:hover {
     text-decoration: underline;
+}
+
+.invalid-email-msg{
+    color: #e74c3c;
+    text-decoration: double;
 }

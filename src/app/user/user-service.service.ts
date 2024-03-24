@@ -37,4 +37,8 @@ export class UserServiceService {
     this.user = undefined;
     localStorage.removeItem(this.USER_KEY)
    }
+
+   register() {
+    
+   }
 }
