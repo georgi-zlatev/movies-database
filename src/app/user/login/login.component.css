@@ -39,10 +39,14 @@
 
 .auth-section input {
     padding: 0.8rem;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
+}
+
+#password{
+    margin-bottom: 2rem;
 }
 
 .auth-section button {
@@ -60,7 +64,7 @@
 }
 
 .auth-section p {
-    text-align: center;
+    text-align: left;
     margin-top: 1rem;
 }
 
@@ -77,4 +81,13 @@
     color: #e74c3c; 
     font-size: 1rem; 
     margin-top: 0.5rem; 
+}
+
+.invalid-email-msg{
+    color: #e74c3c;
+    text-decoration: double;
+}
+
+.input-password{
+    padding-top: 1rem;
 }

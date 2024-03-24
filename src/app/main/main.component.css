@@ -1,25 +1,25 @@
 .movies-list {
     display: flex;
-    flex-wrap: wrap; /* Change to wrap for multiple lines */
+    flex-wrap: wrap; 
     justify-content: space-around;
-    margin: 0 auto; /* Center the container horizontally */
-    width: auto; /* Adjust width as needed */
+    margin: 0 auto; 
+    width: auto;
   }
   
   .movie-card {
     background-color: #fff;
-    border: 2px solid #3498db; /* Blue border */
+    border: 2px solid #3498db; 
     border-radius: 8px;
     margin: 10px;
     padding: 20px;
-    width: calc(25% - 20px); /* Adjusted width for four cards in a row */
-    text-align: center; /* Center text within cards (optional) */
+    width: calc(25% - 20px); 
+    text-align: center; 
   }
   
   .movie-card img {
     height: 200px;
-    display: block; /* Ensure image fills container width */
-    margin: 0 auto; /* Center image horizontally */
+    display: block; 
+    margin: 0 auto; 
     border-radius: 4px;
   }
   
@@ -29,20 +29,20 @@
 
   .awards-list {
     display: flex;
-    flex-wrap: wrap; /* Change to wrap for multiple lines */
+    flex-wrap: wrap; 
     justify-content: space-around;
-    margin: 0 auto; /* Center the container horizontally */
-    width: auto; /* Adjust width as needed */
+    margin: 0 auto; 
+    width: auto;
   }
 
   .award-card {
     background-color: #fff;
-    border: 2px solid #3498db; /* Blue border */
+    border: 2px solid goldenrod;
     border-radius: 8px;
     margin: 10px;
     padding: 20px;
-    width: calc(25% - 20px); /* Adjusted width for four cards in a row */
-    text-align: center; /* Center text within cards (optional) */
+    width: calc(25% - 20px); 
+    text-align: center;
   }
 
   .award-card img {
@@ -75,7 +75,7 @@
   }
 
   .all-awards {
-    background-color: #3498db;
+    background-color: goldenrod;
     color: #fff;
     border: 2px solid #fff; 
     border-radius: 8px;
@@ -92,6 +92,6 @@
   
   .all-awards:hover {
     background-color: #fff;
-    color: #3498db;
-    border-color: #3498db;
+    color: goldenrod;
+    border-color: goldenrod;
   }

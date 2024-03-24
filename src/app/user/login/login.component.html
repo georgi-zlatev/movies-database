@@ -1,17 +1,36 @@
- <!-- Login Form Section -->
- <section class="auth-section">
-    <h2>Login</h2>
-    <form #form="ngForm" (ngSubmit)="login(form)">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+<!-- Login Form Section -->
+<section class="auth-section">
+  <h2>Login</h2>
+  <form #form="ngForm" (ngSubmit)="login(form)">
+    <label for="username">Username:</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      placeholder="email@email.com"
+      ngModel
+      #inputEmail="ngModel"
+      required
+    />
 
-        <p>Email is required!</p>
-        <p class="error">Email is not valid!</p>
+    <ng-container *ngIf="inputEmail.touched">
+      <p class="invalid-email-msg" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
+      <!-- <p class="error">Email is not valid!</p> -->
+      <br>
+    </ng-container>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+    <label class="input-password" for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      placeholder="******"
+      ngModel
+      #inputPassword="ngModel"
+      required
+    />
 
-        <button>Login</button>
-    </form>
-    <p>Don't have an account? <a href="/register">Sign up here</a>.</p>
+    <button>Login</button>
+  </form>
+  <p>Don't have an account? <a href="/register">Sign up here</a>.</p>
 </section>
