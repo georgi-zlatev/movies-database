@@ -3,32 +3,17 @@
   <h2>Login</h2>
   <form #form="ngForm" (ngSubmit)="login(form)">
     <label for="username">Username:</label>
-    <input
-      type="text"
-      id="username"
-      name="username"
-      placeholder="email@email.com"
-      ngModel
-      #inputEmail="ngModel"
-      required
-    />
+    <input type="text" id="username" name="username" placeholder="email@email.com" ngModel #inputEmail="ngModel" required email [ngModelOptions]="{standalone: true}">
+  <ng-container *ngIf="inputEmail.touched">
+    <p class="invalid-email-msg" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
+    <p class="invalid-email-msg" *ngIf="inputEmail.errors?.['invalidEmail']">Invalid email format!</p>
+  </ng-container>
 
-    <ng-container *ngIf="inputEmail.touched">
-      <p class="invalid-email-msg" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
-      <!-- <p class="error">Email is not valid!</p> -->
-      <br>
-    </ng-container>
-
-    <label class="input-password" for="password">Password:</label>
-    <input
-      type="password"
-      id="password"
-      name="password"
-      placeholder="******"
-      ngModel
-      #inputPassword="ngModel"
-      required
-    />
+  <input type="password" id="password" name="password" placeholder="******" ngModel #inputPassword="ngModel" required minlength="6">
+  <ng-container *ngIf="inputPassword.touched">
+    <p class="invalid-password-msg" *ngIf="inputPassword.errors?.['required']">Password is required!</p>
+    <p class="invalid-password-msg" *ngIf="inputPassword.errors?.['minlength']">Password must be at least 6 characters long!</p>
+  </ng-container>
 
     <button>Login</button>
   </form>

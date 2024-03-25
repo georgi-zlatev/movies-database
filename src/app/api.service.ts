@@ -19,9 +19,9 @@ export class ApiService {
   getAwards() {
     const { apiUrl } = environment
     return this.http.get<Award[]>(`${apiUrl}/awards.json`)
-   }
+  }
 
-   getMovieById(movieId: string): Observable<Movie> {
+  getMovieById(movieId: string): Observable<Movie> {
     const { apiUrl } = environment;
     return this.http.get<Movie>(`${apiUrl}/movies/${movieId}.json`);
   }

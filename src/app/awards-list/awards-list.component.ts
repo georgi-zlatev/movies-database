@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Award } from '../types/awards';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-awards-list',
@@ -13,7 +14,7 @@ export class AwardsListComponent implements OnInit{
   isLoading: boolean = true;
 
 
-  constructor(private api: ApiService){}
+  constructor(private api: ApiService, private router: Router){}
 ngOnInit(): void {
   this.api.getAwards().subscribe((awards) =>{
       this.awards = awards
@@ -23,4 +24,5 @@ ngOnInit(): void {
     
   })
 }
+
 }
