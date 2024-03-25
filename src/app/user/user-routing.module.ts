@@ -6,15 +6,13 @@ import { ProfileComponent } from "./profile/profile.component";
 import { AuthActivate } from "../guards/auth.activate";
 
 const routes: Routes = [
-    { path: 'login', component: LoginComponent },
-    {path: 'register', component: RegisterComponent},
-    {path: 'profile', component: ProfileComponent, canActivate: [AuthActivate]}
+    { path: 'login', component: LoginComponent, canActivate: [AuthActivate] }, // Apply AuthActivate guard
+    { path: 'register', component: RegisterComponent, canActivate: [AuthActivate] },
+    { path: 'profile', component: ProfileComponent,  }
 ];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule],
+    exports: [RouterModule]
 })
-
-
 export class UserRoutingModule { }
