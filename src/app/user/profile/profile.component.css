@@ -64,4 +64,54 @@
   .profile-section a:hover {
     text-decoration: underline;
   }
+
+#username-edit {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  label[for="username-edit"] {
+    flex: 0 0 120px;
+    color: #333;
+    margin-bottom: 1rem;
+
+  }
+
+  #email-edit {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+  }
+  
+  label[for="email-edit"] {
+    flex: 0 0 120px;
+    color: #333;
+    margin-bottom: 1rem;
+
+  }
+  
+  #password-edit {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+  }
+  
+  label[for="password-edit"] {
+    flex: 0 0 120px;
+    color: #333;
+    margin-bottom: 1rem;
+
+  }
   
