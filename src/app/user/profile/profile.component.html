@@ -2,32 +2,35 @@
 <section class="profile-section auth-section">
   <h2>Profile</h2>
   <div class="profile-info">
-    <ng-container>
+    <ng-container *ngIf="!showEditMode">
       <div class="profile-field">
         <label for="username">Username:</label>
-        <p>johndoe</p>
+        <p>{{profileDetails.usename}}</p>
       </div>
       <div class="profile-field">
         <label for="email">Email:</label>
-        <p>email@email.com</p>
+        <p>{{profileDetails.email}}</p>
       </div>
       <div class="profile-field">
         <label for="password">Password:</label>
         <p>******</p>
       </div>
+      <button (click)="onEdit()">Edit Profile</button>
+    </ng-container>
+    <ng-container *ngIf="showEditMode">
       <div class="profile-field">
         <label for="username-edit">Username:</label>
-        <input type="text" name="username" id="username-edit">
+        <input type="text" name="username" id="username-edit" [value]="profileDetails.usename"/>
       </div>
       <div class="profile-field">
         <label for="email-edit">Email:</label>
-        <input type="text" name="email" id="email-edit">
+        <input type="text" name="email" id="email-edit" [value]="profileDetails.email"/>
       </div>
       <div class="profile-field">
         <label for="password-edit">Password:</label>
-        <input type="password" name="password" id="password-edit">
+        <input type="password" name="password" id="password-edit"/>
       </div>
-      <button>Edit Profile</button>
+      <div class="edit-button-container"><button class="cancel-button">Cancel</button> <button class="submit-button">Submit</button></div>
     </ng-container>
   </div>
 </section>

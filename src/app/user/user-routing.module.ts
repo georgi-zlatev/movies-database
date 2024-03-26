@@ -4,10 +4,11 @@ import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { AuthActivate } from "../guards/auth.activate";
+import { AuthRedirect } from "../guards/auth.redirect";
 
 const routes: Routes = [
-    { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent },
+    { path: 'login', component: LoginComponent,   canActivate: [AuthRedirect] },
+    { path: 'register', component: RegisterComponent,canActivate: [AuthRedirect] },
     { path: 'profile', component: ProfileComponent, canActivate: [AuthActivate] },
 ];
 

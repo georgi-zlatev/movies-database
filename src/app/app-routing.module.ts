@@ -9,7 +9,8 @@ import { AddMovieComponent } from './movies/add-movie/add-movie.component';
 import { AuthActivate } from './guards/auth.activate';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
+  // { path: '/home', redirectTo: '/' },
   { path: 'movies', component: MoviesListComponent, },
   { path: 'awards', component: AwardsListComponent },
   { path: 'movie/:id', component: MovieDetailsComponent, canActivate: [AuthActivate] },

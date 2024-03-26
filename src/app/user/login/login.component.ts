@@ -26,6 +26,6 @@ login(form: NgForm) {
   }
   console.log(form.value);
   this.userService.login();
-  this.router.navigate(['/home']);
+  this.router.navigate(['/']);
 }
 }

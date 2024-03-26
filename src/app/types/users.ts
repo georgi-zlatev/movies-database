@@ -15,3 +15,9 @@ export interface UserForAuthentication {
     password: string;
     id: string;
 }
+
+export interface ProfileDetails {
+    usename: string;
+    email: string;
+    tel: string;
+}
