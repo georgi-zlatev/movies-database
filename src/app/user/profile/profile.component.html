@@ -5,32 +5,52 @@
     <ng-container *ngIf="!showEditMode">
       <div class="profile-field">
         <label for="username">Username:</label>
-        <p>{{profileDetails.usename}}</p>
+        <p>{{ profileDetails.username }}</p>
       </div>
       <div class="profile-field">
         <label for="email">Email:</label>
-        <p>{{profileDetails.email}}</p>
+        <p>{{ profileDetails.email }}</p>
       </div>
-      <div class="profile-field">
-        <label for="password">Password:</label>
-        <p>******</p>
-      </div>
-      <button (click)="onEdit()">Edit Profile</button>
+      <button (click)="onToggle()">Edit Profile</button>
     </ng-container>
     <ng-container *ngIf="showEditMode">
-      <div class="profile-field">
-        <label for="username-edit">Username:</label>
-        <input type="text" name="username" id="username-edit" [value]="profileDetails.usename"/>
-      </div>
-      <div class="profile-field">
-        <label for="email-edit">Email:</label>
-        <input type="text" name="email" id="email-edit" [value]="profileDetails.email"/>
-      </div>
-      <div class="profile-field">
-        <label for="password-edit">Password:</label>
-        <input type="password" name="password" id="password-edit"/>
-      </div>
-      <div class="edit-button-container"><button class="cancel-button">Cancel</button> <button class="submit-button">Submit</button></div>
+      <form [formGroup]="form" (ngSubmit)="saveProfileHandle()">
+        <div class="profile-field">
+          <label for="username-edit">Username:</label>
+          <input
+            type="text"
+            name="username"
+            id="username-edit"
+            [value]="profileDetails.username"
+            formControlName="username"
+          />
+        </div>
+
+        <ng-container *ngIf="form.get('username')?.touched">
+          <p class="error" *ngIf="form.get('username')?.errors?.['required']">
+            Username is required!
+          </p>
+          <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">
+            Username must be at least 6 characters!
+          </p>
+        </ng-container>
+
+        <div class="profile-field">
+          <label for="email-edit">Email:</label>
+          <input
+            type="text"
+            name="email"
+            id="email-edit"
+            [value]="profileDetails.email"
+            formControlName="email"
+          />
+        </div>
+
+        <div class="edit-button-container">
+          <button class="cancel-button">Cancel</button>
+          <button class="submit-button">Submit</button>
+        </div>
+      </form>
     </ng-container>
   </div>
 </section>

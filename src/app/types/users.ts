@@ -17,7 +17,7 @@ export interface UserForAuthentication {
 }
 
 export interface ProfileDetails {
-    usename: string;
+    username: string;
     email: string;
     tel: string;
 }
