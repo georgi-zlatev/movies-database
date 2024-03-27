@@ -15,6 +15,7 @@ import { UserModule } from './user/user.module';
 import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
 import { AddMovieComponent } from './movies/add-movie/add-movie.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { AddMovieComponent } from './movies/add-movie/add-movie.component';
     HttpClientModule,
     UserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

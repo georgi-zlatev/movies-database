@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmailValidator, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { EMAIL_DOMAINS } from 'src/app/constants';
 import { emailValidator } from 'src/app/shared/utils/email-validator';
 import { ProfileDetails } from 'src/app/types/users';
@@ -30,7 +30,7 @@ export class ProfileComponent {
   }
 
   saveProfileHandle(): void {
-    console.log('invoked', this.form.value);
+    // console.log('invoked', this.form.value);
 
     if (this.form.invalid) {
       return

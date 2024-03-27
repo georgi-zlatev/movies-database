@@ -1,23 +1,59 @@
 <div class="button-container">
   <button routerLink="/movies" class="back-button">Back</button>
   <button routerLink="/home" class="home-button">Home</button>
-  <button routerLink="/home" class="home-button">Edit</button>
   <button routerLink="/awards" class="awards-button">Awards</button>
 </div>
 <div *ngIf="movie" class="movie-details">
-  <img src={{movie.posterUrl}} alt={{movie.name}}>
+  <img src="{{ movie.posterUrl }}" alt="{{ movie.name }}" />
   <div class="movie-info">
     <h2>{{ movie.name }}</h2>
     <p>Year of Release: {{ movie.releaseYear }}</p>
     <p>Plot Summary: {{ movie.plotSummary }}</p>
-    <p>Genre: {{ movie.genre.join(', ') }}</p>
+    <p>Genre: {{ movie.genre.join(", ") }}</p>
     <p>Likes: {{ movie.likes }}</p>
     <p>Award Category: {{ movie.awardId.category }}</p>
     <p>Award Name: {{ movie.awardId.name }}</p>
-    <p>Cast: {{ movie.cast.join(', ') }}</p>
+    <p>Cast: {{ movie.cast.join(", ") }}</p>
     <p>Director's Username: {{ movie.userId.username }}</p>
     <p>Created At: {{ movie.created_at }}</p>
     <p>Updated At: {{ movie.updatedAt }}</p>
   </div>
+  <button class="home-button">Edit</button>
 </div>
+
+<div *ngIf="movie" class="movie-details">
+  <img src="{{ movie.posterUrl }}" alt="{{ movie.name }}" />
+  <div class="movie-info">
+    <div></div>
+    <h2>{{ movie.name }}</h2>
+    <label for="release-year">Year of Release: </label>
+    <input type="text" id="release-year" [(ngModel)]="movie.releaseYear" />
+    <label for="plot-summary">Plot Summary: </label>
+    <textarea id="plot-summary" [(ngModel)]="movie.plotSummary"></textarea>
+    <label for="genre">Genre: </label>
+    <input type="text" id="genre" [(ngModel)]="movie.genre" />
+    <label for="likes">Likes: </label>
+    <p>{{ movie.likes }}</p>
+    <label for="award-category">Award Category: </label>
+    <input
+      type="award-category"
+      id="award-category"
+      [(ngModel)]="movie.awardId.category"
+    />
+    <label for="award-name">Award Name: </label>
+    <p>{{ movie.awardId.name }}</p>
+    <label for="cast">Cast: </label>
+    <input type="text" id="cast" [(ngModel)]="movie.cast" />
+    <label for="director">Director's Username: </label>
+    <p>{{ movie.userId.username }}</p>
+    <label for="created">Created At: </label>
+    <p>{{ movie.created_at }}</p>
+    <label for="updated">Updated At: </label>
+    <p>{{ movie.updatedAt }}</p>
+  </div><div class="edit-button-container">
+    <button class="cancel-button">Cancel</button>
+    <button class="submit-button">Submit</button>
+  </div>
+  </div>
+  
 

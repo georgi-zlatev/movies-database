@@ -21,7 +21,7 @@
             type="text"
             name="username"
             id="username-edit"
-            [value]="profileDetails.username"
+            [(ngModel)] = "profileDetails.username"
             formControlName="username"
           />
         </div>
@@ -41,7 +41,7 @@
             type="text"
             name="email"
             id="email-edit"
-            [value]="profileDetails.email"
+            [(ngModel)] = "profileDetails.email"
             formControlName="email"
           />
         </div>

@@ -12,6 +12,8 @@ import { Movie } from 'src/app/types/movies';
 export class MovieDetailsComponent implements OnInit {
   movie: Movie | undefined;
   isLoading: boolean = true;
+  showEditMode: boolean = false;
+
 
   constructor(private route: ActivatedRoute, private api: ApiService) {}
 
@@ -24,4 +26,6 @@ export class MovieDetailsComponent implements OnInit {
       });
     }
   }
+
+  
 }
