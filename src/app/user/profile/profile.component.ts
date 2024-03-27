@@ -20,22 +20,28 @@ export class ProfileComponent {
 
   form = this.fb.group({
     username: ['', [Validators.required, Validators.minLength(5)]],
-    email: ['', [Validators. required, emailValidator(EMAIL_DOMAINS)]],
+    email: ['', [Validators.required, emailValidator(EMAIL_DOMAINS)]],
   })
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) { }
 
-  onToggle(): void{
+  onToggle(): void {
     this.showEditMode = !this.showEditMode
   }
 
   saveProfileHandle(): void {
     console.log('invoked', this.form.value);
-    
+
     if (this.form.invalid) {
       return
     }
     this.profileDetails = this.form.value as ProfileDetails;
     this.onToggle()
+  }
+
+  onCancel(e: Event) {
+    e.preventDefault()
+    this.onToggle()
+
   }
 }

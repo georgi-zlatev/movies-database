@@ -46,9 +46,18 @@
           />
         </div>
 
+        <ng-container *ngIf="form.get('email')?.touched">
+          <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+            Email is required!
+          </p>
+          <p class="error" *ngIf="form.get('email')?.errors?.['minlength']">
+            Email must be at least 6 characters!
+          </p>
+        </ng-container>
+
         <div class="edit-button-container">
-          <button class="cancel-button">Cancel</button>
-          <button class="submit-button">Submit</button>
+          <button class="cancel-button" (click)="onCancel($event)">Cancel</button>
+          <button class="submit-button" [disabled]="form.invalid" [style]="{backgroundColor: form.invalid ? 'grey' : '#2980b9'}">Submit</button>
         </div>
       </form>
     </ng-container>
